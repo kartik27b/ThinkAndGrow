@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>ThinkAndGrow</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -10,32 +11,55 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
     <style>
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 5px 20px 1px 10px;
+            margin-top: 30px;
+            margin-right: 10px;
+            margin-left: 70px;
+            margin-bottom: 2px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        
+        input[type=text]:focus {
+            width: 100%;
+        }
+        
         body {
             margin: 0;
             padding: 0;
         }
-
+        
         .primary {
             background-color: blue;
             /*            height: 100vh;*/
         }
-
+        
         .secondary {
             background-color: red;
             /*            height: 100vh;*/
         }
-
+        
         .full {
             height: 100vh;
         }
-
+        
         .main {
             border-right: 1px solid #dadfea;
             border-left: 1px solid #dadfea;
             padding: 0 !important;
             margin: 0 !important;
         }
-
+        
         .question_card {
             width: 100%;
             /*            background-color: rebeccapurple;*/
@@ -45,13 +69,13 @@
             /*            justify-content: center;*/
             /*            height: 100px*/
         }
-
+        
         .heading {
             font-size: 18px;
         }
-
+        
         .question_content {}
-
+        
         .subheading {
             color: #696969;
             display: inline-block;
@@ -62,7 +86,7 @@
             display: flex;
             margin-top: 15px;
         }
-
+        
         .tag {
             display: inline-block;
             background-color: #484848;
@@ -72,14 +96,14 @@
             border-radius: 6px;
             margin-right: 5px;
         }
-
+        
         .content {
             display: block;
             flex: 3;
             /*            border-right: 1px solid black;*/
             /*            background-color: rebeccapurple;*/
         }
-
+        
         .avatar {
             width: 40px;
             height: 40px;
@@ -94,6 +118,35 @@
             flex-direction: row;
             align-items: center;
             margin-top: 20px;
+        }
+
+        
+        .custom {
+            width: 220px;
+        }
+        
+        .ryt {
+            background-color: gray;
+            height: full;
+        }
+        
+        .sidetop {
+            background-color: blue;
+            height: 50px;
+            width: 5px;
+        }
+        
+        .txt {
+            font-size: 20px;
+        }
+        
+        .place {
+            margin-right: 10px;
+        }
+        
+        .lgn {
+            margin-right: 1px;
+            margin-left: 1000px;
         }
 
         .point_card {
@@ -144,12 +197,27 @@
 
 <body>
     <!--    navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <form>
+            <input type="text" name="search" placeholder="Search" class="place">
+        </form>
+        <div>
+
+        </div>
+        <div class="lgn">
+            <a href="#">login or register</a>
+        </div>
+
+
+    </nav>
+    <!-- body-->
 
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 full">
                 <!--                left sidebar-->
-                Hello
+                <button type="button" class="btn btn-primary btn-lg custom px-2 mt-1"><strong>+ </strong>Activate</button>
             </div>
 
             <div class="col full main">
@@ -180,6 +248,7 @@
                         <div class="person_detail">
                             <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjAwMzc5OTEzOF5BMl5BanBnXkFtZTgwMDc5ODU3MTE@._V1_UX172_CR0,0,172,256_AL_.jpg" class="avatar">
 
+
                             <h1 class="subheading">
                                 Marry Asked on 3 August, 2020 in <span><a href="#">Technology</a></span>
                             </h1>
@@ -304,6 +373,7 @@
 
                             <!--                            badge-->
 
+
                         </div>
                     </div>
 
@@ -328,6 +398,7 @@
                                 </div>
                                 <h1 class="subheading point_card_text">Views</h1>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -337,14 +408,22 @@
 
 
             </div>
-            <div class="col-2 full">
+            <div class="col-2 full ryt">
                 <!--                right sidebar-->
-                world
+                <div class="row">
+                    <div class="sidetop ml-3 mt-2"></div>
+                    <section>
+                        <div class="px-1"> <b>Questions</b></div>
+                        <div class="px-1 txt"> <b>18</b></div>
+                    </section>
+
+
+                </div>
             </div>
 
         </div>
     </div>
 
 </body>
-
+</html>
 </html>
