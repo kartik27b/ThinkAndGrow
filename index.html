@@ -29,37 +29,37 @@
             -webkit-transition: width 0.4s ease-in-out;
             transition: width 0.4s ease-in-out;
         }
-        
+
         input[type=text]:focus {
             width: 100%;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
         }
-        
+
         .primary {
             background-color: blue;
             /*            height: 100vh;*/
         }
-        
+
         .secondary {
             background-color: red;
             /*            height: 100vh;*/
         }
-        
+
         .full {
             height: 100vh;
         }
-        
+
         .main {
             border-right: 1px solid #dadfea;
             border-left: 1px solid #dadfea;
             padding: 0 !important;
             margin: 0 !important;
         }
-        
+
         .question_card {
             width: 100%;
             /*            background-color: rebeccapurple;*/
@@ -69,13 +69,13 @@
             /*            justify-content: center;*/
             /*            height: 100px*/
         }
-        
+
         .heading {
             font-size: 18px;
         }
-        
+
         .question_content {}
-        
+
         .subheading {
             color: #696969;
             display: inline-block;
@@ -86,7 +86,7 @@
             display: flex;
             margin-top: 15px;
         }
-        
+
         .tag {
             display: inline-block;
             background-color: #484848;
@@ -96,14 +96,14 @@
             border-radius: 6px;
             margin-right: 5px;
         }
-        
+
         .content {
             display: block;
             flex: 3;
             /*            border-right: 1px solid black;*/
             /*            background-color: rebeccapurple;*/
         }
-        
+
         .avatar {
             width: 40px;
             height: 40px;
@@ -120,30 +120,29 @@
             margin-top: 20px;
         }
 
-        
+
         .custom {
             width: 220px;
         }
-        
+
         .ryt {
-            background-color: gray;
             height: full;
         }
-        
+
         .sidetop {
             background-color: blue;
             height: 50px;
             width: 5px;
         }
-        
+
         .txt {
             font-size: 20px;
         }
-        
+
         .place {
             margin-right: 10px;
         }
-        
+
         .lgn {
             margin-right: 1px;
             margin-left: 1000px;
@@ -192,11 +191,52 @@
             /*            background-color: green;*/
         }
 
+        .top_nav {
+            height: 80px;
+            background-color: #2F364A;
+            position: sticky;
+            display: flex;
+            top: 0;
+            z-index: 100;
+        }
+
+
+        .green {
+            background-color: green;
+        }
+
+        .white {
+            background-color: white;
+        }
+
+        .top_nav {
+            background-color: #2F364A;
+        }
+
+        .nav_left {
+            background-color: gray;
+            flex: 2;
+        }
+
+        .nav_right {
+            flex: 2;
+            /*            background-color: white;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav_center {
+            flex: 8;
+            background-color: yellow;
+        }
+
     </style>
 </head>
 
 <body>
     <!--    navbar-->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
         <form>
@@ -208,9 +248,26 @@
         <div class="lgn">
             <a href="#">login or register</a>
         </div>
-
-
     </nav>
+
+
+    <!--    tried custom navbar to create exact copy of theme page-->
+    <!--
+    <nav class="top_nav">
+        <div class="nav_left">
+            ThinkAndGrow
+        </div>
+        <div class="nav_center">
+            ThinkAndGrow
+        </div>
+        <div class="nav_right">
+            <a href="#">Login or Register</a>
+        </div>
+    </nav>
+
+-->
+
+
     <!-- body-->
 
     <div class="container-fluid">
@@ -219,6 +276,9 @@
                 <!--                left sidebar-->
                 <button type="button" class="btn btn-primary btn-lg custom px-2 mt-1"><strong>+ </strong>Activate</button>
             </div>
+
+
+
 
             <div class="col full main">
                 <!--               cards section-->
@@ -341,8 +401,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="question_card">
                     <div class="content">
                         <h1 class="heading">
@@ -425,5 +485,5 @@
     </div>
 
 </body>
-</html>
+
 </html>
