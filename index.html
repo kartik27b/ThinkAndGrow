@@ -78,7 +78,6 @@
 
         .subheading {
             color: #696969;
-            display: inline-block;
             font-size: 15px;
         }
 
@@ -162,18 +161,21 @@
             height: 50px;
             border-radius: 50%;
             border: 1px solid #dadfea;
-            /*            vertical-align: middle;*/
+            line-height: 50px;
+            text-align: center;
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin: 0;
-            padding: 0;
-            /*            text-align: center;*/
+            justify-content: center;
+            white-space: nowrap;
+            
+/*            vertical-align: middle;*/
         }
 
+/*
         .point_card_text {
             margin-top: 10px;
         }
+*/
 
         .points {
             display: flex;
@@ -231,6 +233,59 @@
             background-color: yellow;
         }
 
+        .category_area {
+            padding: 20px 35px;
+            border-bottom: 1px solid #dadfea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category_controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+            margin-right: 10px;
+        }
+
+        .question_type_area {
+            padding-left: 35px;
+            padding-right: 35px;
+            border-bottom: 1px solid #dadfea;
+        }
+
+        .question_navs {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav_item {
+            margin-right: 35px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 6px solid transparent;
+            transition: border-bottom 0.2s ease-in-out;
+            text-decoration: none;
+        }   
+
+        .nav_item:hover {
+            border-bottom: 6px solid #F39C31;
+        }
+        
+        .nodecoration{
+            text-decoration: none;
+        }
+        
+        .active{
+            border-bottom: 6px solid #F39C31;
+        }
+
     </style>
 </head>
 
@@ -283,6 +338,31 @@
             <div class="col full main">
                 <!--               cards section-->
 
+                <div class="category_area">
+                    <h1 class="heading">All Categories</h1>
+                    <div class="category_controls">
+                        <h1 class="subheading nowrap">Filter by</h1>
+                        <!--                        <div class="form-group">-->
+                        <select class="form-control">
+                            <option>Select Categories</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <!--                        </div>-->
+                    </div>
+                </div>
+
+                <div class="question_type_area subheading">
+                    <ul class="question_navs">
+                        <li class="nav_item active"><a href="#">Latest</a></li>
+
+                        <li class="nav_item"><a href="#">Votes</a></li>
+                        <li class="nav_item"><a href="#">Unanswered</a></li>
+
+                    </ul>
+                </div>
 
                 <div class="question_card">
                     <div class="content">
